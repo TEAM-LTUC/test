@@ -1,16 +1,18 @@
 'use strict';
   // add one plan 
-  const checkboxValues = [];
+const checkboxValues = [];
 
 const plan = new Plan('planA');
 // add one day to plan
 //const day = new PlanDay ('petraDay');
 function handleSubmit(event) {
   // TODO: Prevent the page from reloading
-  //event.preventDefault ();
+  event.preventDefault ();
   // Do all the things ...
   addSelectedDataToPlan(event);
   plan.saveToLocalStorage();
+  pickHotel();
+  pickResturent();
 }
   // TODO: get data from form , add the form data to plan object 
 function addSelectedDataToPlan(event) {
@@ -47,3 +49,4 @@ function addSelectedDataToPlan(event) {
 // add event Listner on form submit;
  const formSubmit= document.getElementById('tripForm');
  formSubmit.addEventListener('submit',handleSubmit);
+ // substitute checklist with radio-buttons 
