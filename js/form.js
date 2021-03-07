@@ -13,6 +13,7 @@ function handleSubmit( event ) {
   plan.saveToLocalStorage();
   pickHotel();
   pickResturent();
+  pickActivities();
 }
 // TODO: get data from form , add the form data to plan object
 function addSelectedDataToPlan( event ) {
@@ -42,7 +43,7 @@ function addSelectedDataToPlan( event ) {
   // make new arr and push the 3 selected checkboxes to it : nature, historical, urban, handCraft
   // for loop
   // call getFormData and add form values to 'plan' object .
-  plan.0 ( time,budget ,checkboxValues );
+  plan.getFormData ( time,budget ,checkboxValues );
 
   // write a code to move you to `plan.html` page
 }

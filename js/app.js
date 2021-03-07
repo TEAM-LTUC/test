@@ -22,20 +22,21 @@ function PlanDay ( dayLocation ) {
 }
 
 
-function Activities ()
+function Activities (activityname,budget,locationAct)
 {
-  this.name = '' ;
-  this.activityBudget = '';
-  this.location = '';
+  this.name = activityname ;
+  this.activityBudget = budget;
+  this.location = locationAct;
   this.catogery = '';
 
-  Activities.all.push( this );
 
 
 
   this.timeNeeded = 4;
   this.map = '';
   this.imagePath = '';
+  Activities.all.push( this );
+
 }
 Activities.all = [];
 
@@ -163,6 +164,65 @@ function generatResturent ()
 
 
 generatResturent ();
+
+
+
+function generateActivities ()
+{
+  new Activities ( 'Activities1','L','south', );
+  new Activities ( 'Activities2','L','south', );
+  new Activities ( 'Activities3','L','south', );
+
+
+  new Activities ( 'Activities1','L','north' );
+  new Activities ( 'Activities2','L','north' );
+  new Activities ( 'Activities3','L','north' );
+
+
+  new Activities ( 'Activities1','L','middle' );
+  new Activities ( 'Activities2','L','middle' );
+  new Activities ( 'Activities3','L','middle' );
+
+  //----------------------------------------------
+
+  new Activities ( 'Activities1','M','south' );
+  new Activities ( 'Activities2','M','south' );
+  new Activities ( 'Activities3','M','south' );
+
+
+  new Activities ( 'Activities1','M','north' );
+  new Activities ( 'Activities2','M','north' );
+  new Activities ( 'Activities3','M','north' );
+
+
+  new Activities ( 'Activities1','M','middle' );
+  new Activities ( 'Activities2','M','middle' );
+  new Activities ( 'Activities3','M','middle' );
+
+  //------------------------------------------------
+
+
+  new Activities ( 'Activities1','G','south' );
+  new Activities ( 'Activities2','G','south' );
+  new Activities ( 'Activities3','G','south' );
+
+
+  new Activities ( 'Activities1','G','north' );
+  new Activities ( 'Activities2','G','north' );
+  new Activities ( 'Activities3','G','north' );
+
+  new Activities ( 'Activities1','G','middle' );
+  new Activities ( 'Activities2','G','middle' );
+  new Activities ( 'Activities3','G','middle' );
+
+
+  console.log( Activities.all );
+}
+
+
+generateActivities ();
+
+
 
 
 

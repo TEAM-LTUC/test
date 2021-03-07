@@ -28,5 +28,18 @@ function pickResturent ()
 
 
   }
+  
+}
+
+function pickActivities(){
+
+  for ( let i = 0 ; i < Activities.all.length ; i++ ){
+    if ( plan.budget === Activities.all[i].activityBudget && plan.planDays[0].dayLocation === Activities.all[i].location ) {
+      plan.planDays[0].planActivities.push( Activities.all[i] );
+
+
+    }
+
+  }
   console.log( plan );
 }
